@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{setspace}
+\onehalfspacing
+\title{3DViewer-v1.0}
+\author{Rooneele Ayrmidok}
+\begin{document}
+\section{Intro}
+3DViewer-v1.0 is a simple viewer for 3D models. 
+
+\section{The example of supported .obj file format}
+This version of the viewer partially suports .obj file format.
+In this project we were to implement only vertices and surfaces list support.
+
+
+  \# List of geometric vertices, with (x, y, z [,w]) coordinates, w is optional and defaults to 1.0.
+  
+  v 0.123 0.234 0.345 1.0
+  
+  v ...
+  
+  ...
+  
+  \# Polygonal face elements
+  
+  f v1 v2
+  f v1 v2 v3 v4
+
+  ...
+  
+Different number of verteces in polygonal face are supported.
+
+\section{Basic functions}
+The program provides the ability to:
+- Load a wireframe model from an obj file (vertices and surfaces list support only).
+- Translate the model by a given distance in relation to the X, Y, Z axes.
+- Rotate the model by a given angle relative to its X, Y, Z axes.
+- Scale the model by a given value.
+
+To perform these operations user is to enter parameters of any
+transformation in the panel on the left.
+
+\section{Bonus functions}
+- The program allows customizing the type of projection (parallel and central)
+- The program allows setting up the type (solid, dashed), color and thickness of the edges, display method (none, circle, square), color and size of the vertices
+- The program allows choosing the background color
+- All settings are saved by clicking on the "Save configuration" button, and then you can load the custom settings by clicking on the "Load configuration" button.
+- To set the default values, click the "Set the configuration to the default value" button.
+- The program allows saving the captured (rendered) images as bmp and jpeg files.
+- The program allows recording small screencasts by a special button - the current custom affine transformation of the loaded object into gif-animation (10fps, 5s)
+
+\end{document}
